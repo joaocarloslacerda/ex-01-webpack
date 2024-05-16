@@ -1,7 +1,9 @@
-require("./index.css")
+import "./scss/index.scss"
+import { concatenarNomes } from "./gerenciaDeNomes"
+import { dividirDoisNumeros } from "./divisao"
 
-const { dividirDoisNumeros } = require("./divisao")
+document.getElementById("buttonConcatenar")
+    .addEventListener("click", concatenarNomes)
 
-console.log("teste webpack")
-
-document.getElementById("buttonDividir").addEventListener("click", dividirDoisNumeros)
+document.getElementById("buttonDividir")
+    .addEventListener("click", dividirDoisNumeros)

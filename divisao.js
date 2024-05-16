@@ -1,14 +1,13 @@
-function dividirDoisNumeros(){
+export function dividirDoisNumeros(){
 
     const valorUm = Number(document.getElementById("numeroUm").value)
     const valorDois = Number(document.getElementById("numeroDois").value)
 
     const valorResultado = document.getElementById("valorResultado")
-    valorResultado.innerText = valorUm / valorDois
-    console.log( valorUm / valorDois)
 
+    valorResultado.innerText = divisao(valorUm, valorDois)
 }
 
-module.exports = {
-    dividirDoisNumeros
+function divisao(valorUm, valorDois){
+    return valorUm / valorDois
 }
