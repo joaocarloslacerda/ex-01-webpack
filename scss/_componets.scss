@@ -2,4 +2,60 @@
 
 @mixin card{
     background-color: $cinza-claro;
+    display: flex;
+    flex-direction: row;
+    width: 100vh;
+    padding: 10px;
+    gap: 20px;
+}
+
+@mixin texto{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+@mixin textoPlaceholder{
+    color: $cinza-medio;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+@mixin textoResultado{
+    font-size: 60px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+@mixin divButtonsCampos{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0;
+    flex-grow: 1;
+    gap: 15px;
+    padding: 15px;
+}
+
+@mixin divResultado{
+    background-color: $cinza-medio;
+    border: 2px solid $cinza-escuro;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 15px;
+}
+
+@mixin camposTexto{
+    background-color: $branco;
+    border: 2px solid $cinza-medio;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+@mixin button{
+    background-color: $cinza-escuro;
+    color: $branco;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
 }

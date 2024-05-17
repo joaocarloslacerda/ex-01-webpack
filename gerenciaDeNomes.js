@@ -6,7 +6,7 @@ export function concatenarNomes(){
     const nomeResultado = document.getElementById("nomeResultado");
 
     nomeResultado.innerText = concatenar(nome.value, sobrenome.value);
-
+    nomeResultado.style.fontSize = "30px"
 }
 
 function concatenar(nome, sobrenome){

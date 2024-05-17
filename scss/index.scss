@@ -1,11 +1,67 @@
 @import "./cores";
+@import "./resets";
+@import "./componets";
 
 body{
+    @include resets;
     background-color: $verde;
     .main{
         display: flex;
+        height: 100vh;
+        flex-direction: row;
+        gap: 20px;
+        padding-left: 100px;
+        padding-right: 100px;
+        align-items: center;
+        justify-content: center;
         .card{
-
+            @include card;
+            .divButtonsCampos{
+                @include divButtonsCampos;
+                #nome{
+                    @include camposTexto;
+                }
+                #sobrenome{
+                    @include camposTexto;
+                }
+                #nome::placeholder{
+                    @include textoPlaceholder;
+                }
+                #sobrenome::placeholder{
+                    @include textoPlaceholder;
+                }
+                #buttonConcatenar{
+                    @include button;
+                    @include texto;
+                }
+                #numeroUm{
+                    @include camposTexto;
+                }
+                #numeroDois{
+                    @include camposTexto;
+                }
+                #numeroUm::placeholder{
+                    @include textoPlaceholder;
+                }
+                #numeroDois::placeholder{
+                    @include textoPlaceholder;
+                }
+                #buttonDividir{
+                    @include button;
+                    @include texto;
+                }
+            }
+            .divResultado{
+                @include divResultado;
+                @include texto;
+                #nomeResultado{
+                    @include textoResultado;
+                    text-transform: capitalize;
+                }
+                #valorResultado{
+                    @include textoResultado;
+                }
+            }
         }
     }
 }
